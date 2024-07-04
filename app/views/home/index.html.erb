@@ -1,0 +1,16 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% @posts.each do |post| end %>
+
+<% @posts.each do |post| %>
+  <%= link_to post do %>
+      <h2><%= post.title %></h2>
+      <p><%= post.description %></p>
+      <p><%= post.created_at %></p>
+      <p><%= post.updated_at %></p>
+      <hr>
+  <% end %>
+<% end %>
+
+<%= link_to 'Novo Post', new_post_path %>
